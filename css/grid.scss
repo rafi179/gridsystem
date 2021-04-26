@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    content: "";
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 90%;
+    background: rgb(168, 161, 161);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class^="col"]{
+    content: "";
+    background: rgb(32, 32, 31);
+    height: 30px;
+    margin: 10px 0.5%;
+    color: white;
+}
+
+@for $i from 1 through 12{
+    .col-#{$i}{
+        width: (100%/(12/$i))-1%;
+    }
+}
+
